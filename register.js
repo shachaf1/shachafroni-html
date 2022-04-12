@@ -1,6 +1,7 @@
 var users = [];
-
-function register() {
+var check = document.getElementById("register");
+//The logic when the Register button was entered.
+check.onclick = function() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var nickname = document.getElementById("nickname").value;
@@ -13,10 +14,14 @@ function register() {
         image: image,
         nickname: nickname
     };
-    //isEmpty(user, passwordValidation);
-    //validationPassword(user, passwordValidation);
-    //validPassword(user);
-    isOk(user,passwordValidation);
+    href="login.html";
+    if(isOk(user,passwordValidation)) {
+        users.push(user);
+        window.location.assign("login.html");
+        return false;
+    }
+    return;
+
 }
 function isOk(user, passwordValidation) {
     if(!isEmpty(user, passwordValidation)) {
@@ -31,6 +36,7 @@ function isOk(user, passwordValidation) {
         window.alert("error: the validation password isn't correlative");
         return false;
     }
+    return true;
 }
 function validationPassword(user, passwordValidation) {
     if(user.password != passwordValidation) {
