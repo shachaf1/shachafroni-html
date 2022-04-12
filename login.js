@@ -12,13 +12,12 @@ var user2 = {
     nickname: "shachaf1"
 };
 users = [user1,user2];
-var check1 = document.getElementById("login");
+var check = document.getElementById("login");
 //The logic when the Register button was entered.
-check1.onclick = function() {
-    window.alert("nickname");
+check.onclick = function() {
 
-    var nickname = document.getElementById("nickname").value;
     var password = document.getElementById("password").value;
+    var nickname = document.getElementById("nickname").value;
     usernum = -1;
     for(let i=0;i<users.length;i++) {
         if(nickname == users[i].nickname && password == users[i].password) {
@@ -26,7 +25,6 @@ check1.onclick = function() {
         }
     }
     if(usernum == -1) {
-        alert("incorect");
+        alert("incorect nickname or password");
     }
-    allert("correct");
-}
+a}
