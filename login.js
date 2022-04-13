@@ -26,5 +26,8 @@ check.onclick = function() {
     }
     if(usernum == -1) {
         alert("incorect nickname or password");
+        return;
     }
+    window.location.assign("chat.html");
+    return false;
 a}

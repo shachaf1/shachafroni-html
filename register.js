@@ -14,7 +14,6 @@ check.onclick = function() {
         image: image,
         nickname: nickname
     };
-    href="login.html";
     if(isOk(user,passwordValidation)) {
         users.push(user);
         window.location.assign("login.html");
